@@ -1,7 +1,7 @@
 //API key and endpoint 
 
 const API_KEY = "6a391254f6cc39adc714e97cc9098241";
-const endpoint = "api.openweathermap.org";
+const endpoint = "https://api.openweathermap.org/data/2.5/weather";
 
 //Selecting DOM elements
 
@@ -27,7 +27,7 @@ form.addEventListener('submit', function(event){
 
 
 function apiFetchWeather(query){
-    const weatherURL = `${endpoint}/data/2.5/weather?&units="metric"&q=${query}&appid=${API_KEY}`
+    const weatherURL = `${endpoint}?units=metric&q=${query}&appid=${API_KEY}`
     axios
     .get(weatherURL)
     .then(function(response){
@@ -40,5 +40,13 @@ function apiFetchWeather(query){
 
 
 
+// function to render weather data in the gallery 
 
+function createMarkup (city){
+
+    return `
+    
+    
+    `;
+}
 
